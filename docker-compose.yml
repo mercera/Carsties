@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres
+    image: postgres:latest
     environment:
       - POSTGRES_PASSWORD=postgrespw
     ports:
@@ -16,6 +16,11 @@ services:
       - "27017:27017"
     volumes:
       - mongodata:/data/db
+  rabbitmq:
+    image: rabbitmq:4-management-alpine
+    ports:
+      - "15672:15672"
+      - "5672:5672"
 volumes:
   pgdata:
   mongodata:
