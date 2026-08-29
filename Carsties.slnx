@@ -4,6 +4,9 @@
     <Project Path="src/Contracts/Contracts.csproj" />
     <Project Path="src/SearchService/SearchService.csproj" />
   </Folder>
+  <Folder Name="/src/gatewayservice/">
+    <Project Path="src/gatewayservice/GatewayService.csproj" />
+  </Folder>
   <Folder Name="/src/identityservice/">
     <Project Path="src/identityservice/IdentityService.csproj" />
   </Folder>
