@@ -1,24 +1,26 @@
 'use client';
 
 import { useParamsStore } from "@/hooks/useParamsStore";
-import { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 
 export default function Search() {
     const setParams = useParamsStore(state => state.setParams);
     const searchTerm = useParamsStore(state => state.searchTerm);
-    const [value, setValue] = useState('');
+    const [value, setValue] = useState(searchTerm);
+    const [prevSearchTerm, setPrevSearchTerm] = useState(searchTerm);
 
-    useEffect(() => {
-        if (searchTerm === '') setValue('');
-    }, [searchTerm]);
+    if (searchTerm !== prevSearchTerm) {
+        setPrevSearchTerm(searchTerm);
+        setValue(searchTerm);
+    }
 
     function handleChange(e: ChangeEvent<HTMLInputElement>) {
         setValue(e.target.value);
     }
 
     function handleSearch() {
-        setParams({searchTerm: value})
+        setParams({ searchTerm: value })
     }
 
     return (
@@ -34,7 +36,7 @@ export default function Search() {
                 type="text"
                 placeholder="Search for cars by make, model or color"
                 className="
-                flex-grow
+                grow
                 pl-5
                 bg-transparent
                 focus:outline-none
