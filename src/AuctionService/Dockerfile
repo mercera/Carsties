@@ -6,6 +6,7 @@ EXPOSE 80
 COPY Carsties.slnx Carsties.slnx
 COPY src/AuctionService/AuctionService.csproj src/AuctionService/AuctionService.csproj
 COPY src/Contracts/Contracts.csproj src/Contracts/Contracts.csproj
+COPY src/BiddingService/BiddingService.csproj src/BiddingService/BiddingService.csproj
 
 # Restore package deps
 RUN dotnet restore src/AuctionService/AuctionService.csproj

@@ -5,6 +5,9 @@ EXPOSE 80
 # Copy csproj and restore as distinct layers
 COPY Carsties.slnx Carsties.slnx
 COPY src/IdentityService/IdentityService.csproj src/IdentityService/IdentityService.csproj
+COPY src/AuctionService/AuctionService.csproj src/AuctionService/AuctionService.csproj
+COPY src/Contracts/Contracts.csproj src/Contracts/Contracts.csproj
+COPY src/BiddingService/BiddingService.csproj src/BiddingService/BiddingService.csproj
 
 # Restore package deps
 RUN dotnet restore src/IdentityService/IdentityService.csproj
