@@ -7,7 +7,7 @@ namespace BiddingService.Services;
 
 public class GrpcAuctionClient(IConfiguration config, ILogger<GrpcAuctionClient> logger)
 {
-    public Auction? GetAuction(string id)
+    public Auction GetAuction(string id)
     {
         logger.LogInformation($"==> Calling GRPC Service: {config["GrpcAuction"]}");
 
