@@ -3,6 +3,7 @@
     <Project Path="src/AuctionService/AuctionService.csproj" />
     <Project Path="src/BiddingService/BiddingService.csproj" />
     <Project Path="src/Contracts/Contracts.csproj" />
+    <Project Path="src/NotificationService/NotificationService.csproj" />
     <Project Path="src/SearchService/SearchService.csproj" />
   </Folder>
   <Folder Name="/src/gatewayservice/">
