@@ -35,14 +35,7 @@ export default function Search() {
                 value={value}
                 type="text"
                 placeholder="Search for cars by make, model or color"
-                className="
-                grow
-                pl-5
-                bg-transparent
-                focus:outline-none
-                border-transparent
-                focus:border-transparent
-                focus:ring-0
+                className="input-custom
                 text-sm
                 text-gray-600
             "
