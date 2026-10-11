@@ -1,3 +1,13 @@
+Carsties
+
+A car auction platform built as a microservices system. The backend is split into five services (Identity, Auction, Search, Bidding, and Notification) that communicate asynchronously through a RabbitMQ event bus and sit behind an API Gateway. Bidding updates reach users in real time via SignalR. Authentication is handled by IdentityServer, and the Next.js frontend talks to the backend through a BFF layer.
+
+Architecture: PostgreSQL for the Identity and Auction services, MongoDB for Search and Bidding, everything containerized with Docker.
+
+Tech stack: .NET, Next.js, RabbitMQ, IdentityServer, SignalR, PostgreSQL, MongoDB, Docker
+
+Built while following Neil Cummings’ “Build a Microservices App with .NET and NextJS from Scratch” course on Udemy.
+
 You can run this app locally on your computer by following these instructions:
 
 1. Using your terminal or command prompt clone the repo onto your machine in a user folder
